@@ -1,0 +1,64 @@
+header{
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 40px;
+	color: darkblue;
+	background-color: darkgray;
+	margin-top: 10px;
+	font-family: 'Bitter', serif;
+}
+
+.title{
+	font-family: 'Bitter', serif;
+	font-size: 30px;
+}
+
+
+.repair-form{
+	
+	background-color: lightblue;
+
+}
+
+input, textarea, select, button{
+	border-radius: 5px;
+}
+
+.middlePad{
+	padding: 20px;
+}
+.menu{
+	background-color: lightgray;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.home{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	clear: both;
+
+	padding: 20px;
+
+	text-align: center;
+	background-color: lightyellow;
+}
+.repairList{
+	margin-top: 20px;
+}
+
+.panel {
+	margin-top: 20px;
+}
+
+.add-padding{
+	margin-top: 8px;
+	margin-bottom: 8px;
+
+}
+
+.caption{
+	text-align: center;
+}

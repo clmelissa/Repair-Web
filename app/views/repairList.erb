@@ -1,0 +1,63 @@
+<header> <b> TELUS REPAIR LIST </b></header>
+	<div class="container-fluid">
+			<div class="row">
+		
+				<ul class="nav nav-tabs">
+				  <li role="presentation" ><a href="/">Home</a></li>
+				  <li role="presentation" class="active"><a href="/repair-list">Repair List</a></li>
+				  <li role="presentation"><a href="/form">Repair Form </a></li>
+				</ul>
+		
+			</div>
+
+		<div class="row">
+			<form method="get" action="/search" class="form-horizontal middlePad" >
+			<div class="col-md-5">
+				<input type="text" id="search" class="col-md-10 col-md-offset-2" name="search" placeholder="">
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<select name="searchBy" id="searchBy" class="col-md-2" style="margin-right: 5px">
+						<option>TH number</option>
+						<option>Phone Number</option>
+					</select>
+
+					<button type="submit" class="col-md-2 btn-primary"> Search </button>
+
+				</div>
+			</form>
+			</div>
+		</div>
+
+		<div class="row repairList">
+			<div class=" col-md-offset-1 col-md-10">
+				<table class="table">
+					<tr>
+						<td>TH number</td>
+						<td>Name</td>
+						<td>Department</td>
+						<td>Phone</td>
+						<td>Status</td>
+						<td>Date submitted</td>
+					</tr>
+
+					<% @repair.each do |repair| %>
+						<% #if repair.status == "on repair" %>
+						<tr>
+							<td><a href ="/repair/<%= repair.id %>"><%= repair.THnum %> </a></td>
+							<td><%= User.find(repair.user_id).firstName + ' ' + User.find(repair.user_id).lastName %></td>
+							<td><%= User.find(repair.user_id).dept %></td>
+							<td><%= repair.phone %></td>
+							<td><%= repair.status %></td>
+							<td><%= repair.created_at %></td>
+						</tr>
+						<% #end %>
+					<% end %>
+					
+
+				</table>
+				
+			</div>
+			
+		</div>
+	</div>

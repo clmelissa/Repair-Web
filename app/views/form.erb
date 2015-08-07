@@ -1,0 +1,105 @@
+
+
+
+
+<div class="container-fluid">
+	<header> <b> REPAIR FORM </b> </header>
+	<div class="row">
+		
+				<ul class="nav nav-tabs">
+				  <li role="presentation" ><a href="/">Home</a></li>
+				  <li role="presentation"><a href="/repair-list">Repair List</a></li>
+				  <li role="presentation" class="active"><a href="/form">Repair Form </a></li>
+				</ul>
+		
+	</div>
+	<div class="row">
+		<form method="post" action="/form" class="form-horizontal repair-form middlePad" >
+
+			<div class="form-group ">
+				<label for"THnum" class="col-md-3 control-label"> TH-Number </label>
+				<div class="col-md-9">
+					<input type="text" id="THnum" name="THnum" class="col-md-10">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="firstName" class="col-md-3 control-label"> Name  </label>
+				<div class="col-md-9">
+					<input type="text" id="firstName" name="firstName" class="col-md-5" placeholder = "first name">
+					
+					<input class="col-md-5" type="text" id="lastName" name="lastName" placeholder = "lastname">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="dept" class="col-md-3 control-label"> Department </label>
+				<div class="col-md-9">
+					<input type="text" id="dept" class="col-md-10" name="dept">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for'phone' class="col-md-3 control-label"> Phone </label>
+				<div class="col-md-9">
+					<select name="phone" id="phone" class="col-md-9">
+						<optgroup label="Blackberry">
+							<option> Blackberry Q10 </option>
+							<option> Blackberry Classic Q20 </option>
+							<option> Blackberry Z10 </option>
+							<option> Blackberry Z30 </option>
+						</optgroup>
+						<optgroup label="Samsung">
+							<option> Samsung Galaxy S5</option>
+							<option> Samsung Galaxy Note 4 </option>
+						</optgroup>
+						<optgroup label="iPhone">
+							<option> iPhone 5 </option>
+							<option> IPhone 6 </option>
+						</optgroup>
+						
+					</select>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="problem" class="col-md-3 control-label"> Problem  </label>
+				<div class="col-md-9">
+					<textarea class="col-md-10" id="problem" placeholder="Specify device's problem" name="problem"></textarea> 
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="ticketNum" class="col-md-3 control-label"> Ticket Number   </label>
+				<div class="col-md-6">
+					<input class="col-md-10" type="text" id="ticketNum" name="ticketNum">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="GLnum" class="col-md-3 control-label"> GL Code  </label>
+				<div class="col-md-9">
+					<input class="col-md-10" type="text" id="GLnum" name="GLnum">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="phoneNum" class="col-md-3 control-label"> Phone Number  </label>
+				<div class="col-md-9">
+					<input class="col-md-10" type="tel" id="phoneNum" name="phoneNum">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="IMEI" class="col-md-3 control-label"> IMEI  </label>
+				<div class="col-md-6">
+					<input class="col-md-10" type="text" id="IMEI" name="IMEI">
+				</div>
+			</div>
+			<br>
+			<div class="form-group row">
+				<div class="col-md-offset-4 col-md-8">
+					<div class="row">
+					 	<button type="reset" class="btn btn-default col-md-3"> Reset </button>
+					 	<div class="col-md-1"></div>
+					 	<button type="submit" class="btn btn-default col-md-3"> Submit </button>
+					 </div>
+				 </div>
+			</div>
+		
+		</form>
+		</div>
+	</div>
+	</div>

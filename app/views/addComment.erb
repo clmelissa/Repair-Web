@@ -1,0 +1,81 @@
+<header> IT REPAIR WEBSITE </header>
+<div class="container-fluid">
+	<div class="row">
+			
+		<ul class="nav nav-tabs">
+			<li role="presentation" ><a href="/">Home</a></li>
+			<li role="presentation"><a href="/repair-list">Repair List</a></li>
+			<li role="presentation"><a href="/form">Repair Form </a></li>
+		</ul>
+			
+	</div>
+
+	<div class="row">
+		<div class="col-md-offset-4 col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title"><strong> <%= @repair.THnum %></strong></h3>
+			  </div>
+			  <div class="panel-body">
+			  	<div class="row">
+			    	<div class="col-md-6"> Status :</div>
+			    	<div class="col-md-6"> <%= @repair.status %> </div>
+			    </div>
+			    <div class="row">
+			    	<div class="col-md-6"> Ticket Number : </div>
+			    	<div class="col-md-6"> <%= @repair.ticketNum %> </div>
+			    </div>
+			    <div class="row">
+			    	<div class="col-md-6"> Name : </div>
+			    	<div class="col-md-6"> <%= @user.firstName + ' ' +@user.lastName %> </div>
+			    </div>
+			    <div class="row">
+			    	<div class="col-md-6"> Email :</div>
+			    	<div class="col-md-6"> <%= @user.email %> </div>
+			    </div>
+			    <div class="row">
+			    	<div class="col-md-6"> Department : </div>
+			    	<div class="col-md-6"> <%= @user.dept %> </div>
+			    </div>
+			    <div class="row">
+			    	<div class="col-md-6"> Phone :</div>
+			    	<div class="col-md-6"> <%= @repair.phone %> </div>
+			    </div>
+			    <div class="row">
+			    	<div class="col-md-6"> GL code :</div>
+			    	<div class="col-md-6"> <%= @user.GLnum %> </div>
+			    </div>
+
+			    <div class="row">
+			    	<div class="col-md-6"> Phone number :</div>
+			    	<div class="col-md-6"> <%= @repair.phoneNum %> </div>
+			    </div>
+
+			    <div class="row">
+			    	<div class="col-md-6"> IMEI :</div>
+			    	<div class="col-md-6"> <%= @repair.IMEI %> </div>
+			    </div>
+
+			    <div class="row">
+			    	<div class="col-md-6"> Problem :</div>
+			    	<div class="col-md-6"> <%= @repair.problem %> </div>
+			    </div>
+
+			    <div class="row">
+			    	<form method="post" action="/repair/<%=@repair.id%>/add-comment" class="form-horizontal middlePad">
+			    		<div class = "row" >
+							<textarea class="col-md-offset-1 col-md-10 add-padding" id="comment" placeholder="Add Comment" name="comment"></textarea> 
+						</div>
+						<div class="row add-padding">
+							<button type="submit" class="col-md-offset-8 col-md-4"> Add Comment </button>
+						</div>
+			    	</form>
+			    </div>
+
+			  </div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
