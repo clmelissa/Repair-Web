@@ -16,8 +16,8 @@ end
 #detail of the specific repair order
 get '/repair/:id' do
 	 @repair = Repair.find(params[:id])
-	 #@user = User.find(@repair.user_id)
-	 #@comment = Update.where(repairs_id: params[:id])
+	 @user = User.find(@repair.user_id)
+	 @comment = Update.where(repairs_id: params[:id])
 	 redirect '/'
 	 erb :repairDetail
 end
