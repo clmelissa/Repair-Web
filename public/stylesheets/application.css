@@ -35,6 +35,10 @@ input, textarea, select, button{
 	padding-bottom: 10px;
 }
 
+.detail{
+	font-family: 'Source Code Pro', ;
+}
+
 .home{
 	margin-top: 15px;
 	margin-bottom: 15px;
