@@ -59,7 +59,14 @@
 			    </div>
 
 
-			    
+			    <% if @comment %>
+			    	<% @comment.each do |comment| %>
+			    		<div class="row">
+					    	<div class="col-md-6"> Comment :</div>
+					    	<div class="col-md-6"> <%= comment.comment %> <br> By : <%= comment.user %> </div>
+					    </div>
+			    	<% end %>
+			    <% end %>
 
 
 			    <div class="row add-padding">
