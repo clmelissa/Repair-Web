@@ -38,9 +38,11 @@ end
 #close button
 get '/repair/:id/close' do
 	@repair = Repair.find(params[:id])
-	@repair.status = "close"
+	@repair.status = "back to user"
 	@repair.save
 	
+	#send_message()
+
 	redirect "/repair/#{@repair.id}"
 end
 
@@ -116,7 +118,7 @@ get '/search' do
 	search = params[:search]
 
 	if searchBy == "TH number"
-		@repair = Repair.find_by(THnum: search)
+		@repair = Repair.find_by(THnum: search.upcase)
 	elsif searchBy == "Phone Number"
 		@repair = Repair.find_by(phoneNum: search)
 	end
