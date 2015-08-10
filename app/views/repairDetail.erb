@@ -66,7 +66,7 @@
 			    		<% if @repair.status == "on repair" %>
 					    	<a href="/repair/<%= @repair.id %>/back-from-repair" class="btn btn-primary">Back From Repair </a>
 					    <% elsif @repair.status == "Back From Repair" %>
-					    	<-- sending email to user -->
+					    	
 					    	<a href="mailto:<%= @user.email %>?subject=Repaired%phone&body=Hi%2C%0D%0A%0D%0AYour+phone+has+been+repaired+and+arrived+to+us+at+ITS.+You+can+pick+it+up+at+our+office.%0D%0AYou+can+reach+our+office+by+going+to+the+York+Region+building+at+395+Mulock+Drive.%0D%0APlease+give+me+at+least+an+hour+notice+before+your+arrival.%0D%0A+%0D%0ARegards%2C+%0D%0AIT+Service">
 					    		<a href="/repair/<%= @repair.id %>/close" class="btn btn-primary"> Close </a>
 					    	</a>	
